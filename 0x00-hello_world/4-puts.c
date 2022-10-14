@@ -1,13 +1,9 @@
 #include  <stdio.h>
 /**
- *
- *  * main - Entry point
- *
- *   * Description: C program that prints a function followed by a new line
- *
- *    * Return: 0 if successful
- *
- *     */
+ * main - Entry point
+ * Description: C program that prints a function followed by a new line
+ * Return: 0 if successful
+ */
 
 
 
