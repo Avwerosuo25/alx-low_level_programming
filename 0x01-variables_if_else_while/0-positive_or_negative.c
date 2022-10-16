@@ -1,20 +1,18 @@
 #include <stdio.h>
-#include <stdlib.h>
 #include <time.h>
+#include <stdlib.h>
 
 /**
- * main - the main function prints if a number is positive, negative or 0
- * return - Return 0 if successful
+ * main - main fuction generate a random number
+ * Return: return 0(successful)
  */
 
 int main(void)
 {
-
 	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-
 	if (n > 0)
 	{
 		printf("%d is positive\n", n);
@@ -27,7 +25,5 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-
 	return (0);
-
 }
