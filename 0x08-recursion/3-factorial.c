@@ -18,5 +18,5 @@ int factorial(int n)
 
 	solution *= factorial(n - 1);
 
-	return (result);
+	return (solution);
 }
