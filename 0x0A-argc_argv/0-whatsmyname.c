@@ -2,10 +2,10 @@
 #include <stdio.h>
 
 /**
- * main - prints the name of the program
- * @argc: the number of arguments passed in the program from the command line
- * @argv: the name of array of arguments
- * return: 0
+ * main - Prints the name of the program
+ * @argc: Number of command line arguments
+ * @argv: Array name
+ * Return: 0
  */
 
 int main(int argc, char *argv[])
