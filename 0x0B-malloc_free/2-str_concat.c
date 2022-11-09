@@ -2,46 +2,38 @@
 #include <stdlib.h>
 
 /**
- * alloc_grid - Returns a pointer to a 2-D array of int type
- * initialized to 0
- * @width: The width of the 2-dimensional array
- * @height: The height of the 2-dimensional array.
- * Return: NULL if width < 0, height < 0 or function fails
- * else, a pointer to the 2-dimensional array of integers
+ * str_concat - Concatenates two strings.
+ * @s1: The string to be concatenated upon.
+ * @s2: The string to be concatenated to s1.
+ * Return: If concatenation fails - NULL.
+ * else, a pointer the newly-allocated space in memory
+ * containing the concatenated strings.
  */
 
-int **alloc_grid(int width, int height)
+char *str_concat(char *s1, char *s2)
 {
-	int **twoD;
-	int hgt_index, wid_index;
+	char *concat_str;
+	int index, concat_index = 0, len = 0;
 
-	if (width <= 0 || height <= 0)
+	if (s1 == NULL)
+		s1 = "";
+
+	if (s2 == NULL)
+		s2 = "";
+
+	for (index = 0; s1[index] || s2[index]; index++)
+		len++;
+
+	concat_str = malloc(sizeof(char) * len);
+
+	if (concat_str == NULL)
 		return (NULL);
 
-	twoD = malloc(sizeof(int *) * height);
+	for (index = 0; s1[index]; index++)
+		concat_str[concat_index++] = s1[index];
 
-	if (twoD == NULL)
-		return (NULL);
+	for (index = 0; s2[index]; index++)
+		concat_str[concat_index++] = s2[index];
 
-	for (hgt_index = 0; hgt_index < height; hgt_index++)
-	{
-		twoD[hgt_index] = malloc(sizeof(int) * width);
-
-		if (twoD[hgt_index] == NULL)
-		{
-			for (; hgt_index >= 0; hgt_index--)
-				free(twoD[hgt_index]);
-
-			free(twoD);
-			return (NULL);
-		}
-	}
-
-	for (hgt_index = 0; hgt_index < height; hgt_index++)
-	{
-		for (wid_index = 0; wid_index < width; wid_index++)
-			twoD[hgt_index][wid_index] = 0;
-	}
-
-	return (twoD);
+	return (concat_str);
 }
