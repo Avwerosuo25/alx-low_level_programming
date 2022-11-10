@@ -1,6 +1,9 @@
 #include "main.h"
 #include <stdlib.h>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 5f3ba0b839c1861c8ecce9be9aacd3e97e0577f0
 /**
  * alloc_grid - Returns a pointer to a 2-D array of int type
  * initialized to 0
