@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stidlib.h>
+#include <stdlib.h>
 /**
  * alloc_grid - Returns a pointer to a 2-D array of integers
  * which initializes the element to 0
