@@ -1,10 +1,8 @@
 #include <stdio.h>
 
 /**
- * file - 2-main.c
- * Description: file that prints the file it was
- * compiled from, followed by a new line
- * Return: 0 
+ * main - prints the name of the file it was compiled from
+ * Return: Always  0 
  */
 
 int main(void)
