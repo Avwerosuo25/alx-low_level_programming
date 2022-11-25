@@ -4,14 +4,16 @@ section .text
 
 main:
 
-mov   edi, format
+	mov rax, 1
+	mov rdi, 1
+	mov rsi, msg
+	mov rdx, msglen
+	syscall
 
-xor   eax, eax
+	mov rax, 60
+	mov rdi, 0
+	syscall
 
-call  printf
-
-mov eax, 0
-
-ret
-
-format: db `Hello, Holberton\n`,0
+section .rodata
+	msg: db "Hello, Holberton", 10
+	msglen: equ $ - msg
